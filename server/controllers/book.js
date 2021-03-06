@@ -68,6 +68,7 @@ module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
     let updatedBook = Book({
+        "_id" : id,
         "name": req.body.name,
         "author": req.body.author,
         "published": req.body.published,
